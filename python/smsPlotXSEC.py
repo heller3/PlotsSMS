@@ -10,7 +10,7 @@ class smsPlotXSEC(smsPlotABS):
         self.LABEL = label
         self.standardDef(modelname, histo, obsLimits, expLimits, energy, lumi, preliminary)
         # canvas for the plot
-        self.c = rt.TCanvas("cCONT_%s" %label,"cCONT_%s" %label,600,600)
+        self.c = rt.TCanvas("cCONT_%s" %label,"cCONT_%s" %label,800,600)
         self.histo = histo['histogram']
         # canvas style
         self.setStyle()
@@ -25,6 +25,7 @@ class smsPlotXSEC(smsPlotABS):
         self.histo.GetZaxis().SetTitleSize(0.035)
         self.histo.SetMinimum(self.model.Zmin)
         self.histo.SetMaximum(self.model.Zmax)
+        self.histo.GetZaxis().SetTitle("")
 
         # define the palette for z axis
         NRGBs = 5

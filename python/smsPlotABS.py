@@ -43,24 +43,24 @@ class smsPlotABS(object):
 
         self.c.SetRightMargin(0.19)
         self.c.SetTopMargin(0.08)
-        self.c.SetLeftMargin(0.14)
+        self.c.SetLeftMargin(0.12)
         self.c.SetBottomMargin(0.14)
 
         # set x axis
         self.emptyHisto.GetXaxis().SetLabelFont(42)
-        self.emptyHisto.GetXaxis().SetLabelSize(0.035)
+        self.emptyHisto.GetXaxis().SetLabelSize(0.04)
         self.emptyHisto.GetXaxis().SetTitleFont(42)
-        self.emptyHisto.GetXaxis().SetTitleSize(0.05)
-        self.emptyHisto.GetXaxis().SetTitleOffset(1.2)
+        self.emptyHisto.GetXaxis().SetTitleSize(0.055)
+        self.emptyHisto.GetXaxis().SetTitleOffset(1.1)
         self.emptyHisto.GetXaxis().SetTitle(self.model.sParticle)
         #self.emptyHisto.GetXaxis().CenterTitle(True)
 
         # set y axis
         self.emptyHisto.GetYaxis().SetLabelFont(42)
-        self.emptyHisto.GetYaxis().SetLabelSize(0.035)
+        self.emptyHisto.GetYaxis().SetLabelSize(0.04)
         self.emptyHisto.GetYaxis().SetTitleFont(42)
-        self.emptyHisto.GetYaxis().SetTitleSize(0.05)
-        self.emptyHisto.GetYaxis().SetTitleOffset(1.3)
+        self.emptyHisto.GetYaxis().SetTitleSize(0.055)
+        self.emptyHisto.GetYaxis().SetTitleOffset(1.0)
         self.emptyHisto.GetYaxis().SetTitle(self.model.LSP)
         #self.emptyHisto.GetYaxis().CenterTitle(True)
                 

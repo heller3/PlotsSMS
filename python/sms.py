@@ -4,6 +4,7 @@ class sms():
 
     def __init__(self, modelname):
         if modelname.find("T1tttt") != -1: self.T1tttt()
+        if modelname.find("TChiWH") != -1: self.TChiWH()
         if modelname.find("T2tt") != -1: self.T2tt()
         if modelname.find("T5ttttDM175") != -1: self.T5ttttDM175()
         if modelname.find("T5tttt") != -1: self.T5tttt()
@@ -11,6 +12,32 @@ class sms():
         if modelname.find("T1qqqq") != -1: self.T1qqqq()
         if modelname.find("T5qqqqVV") != -1: self.T5qqqqVV()
 
+
+    def TChiWH(self):
+        # model name
+        self.modelname = "TChiWH"
+        # decay chain
+        lsp_s = "#lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{0}}}#kern[-1.3]{#scale[0.85]{_{1}}}"
+        nlsp_s = "#lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{0}}}#kern[-1.3]{#scale[0.85]{_{2}}}"
+        cgino_s = "#lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{1}}}#kern[-1.3]{#scale[0.85]{_{1}}}"
+        self.label= "pp #rightarrow #lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{0}}}#kern[-1.3]{#scale[0.85]{_{2}}}#kern[0.3]{#lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{1}}}#kern[-1.3]{#scale[0.85]{_{1}}}}, #lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{0}}}#kern[-1.3]{#scale[0.85]{_{2}}} #rightarrow h#kern[0.4]{"+lsp_s+"}, #lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{1}}}#kern[-1.3]{#scale[0.85]{_{1}}} #rightarrow W#kern[0.4]{"+lsp_s+"}"
+        # self.label= "pp #rightarrow #lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{0}}}#kern[-1.3]{#scale[0.85]{_{2}}}#kern[0.3]{#lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{1}}}#kern[-1.3]{#scale[0.85]{_{1}}}}, #lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{0}}}#kern[-1.3]{#scale[0.85]{_{2}}} #rightarrow h#kern[0.4]{"+lsp+"}, #lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{1}}}#kern[-1.3]{#scale[0.85]{_{1}}} #rightarrow W#kern[0.4]{"+lsp_s+"}"
+        self.label2= "";
+        # scan range to plot
+        self.Xmin = 100.
+        self.Xmax = 950.
+        self.Ymin = 0.
+        self.Ymax = 550.
+        self.Zmin = 0.001
+        self.Zmax = 2.
+        # produce sparticle
+        self.sParticle = "m#kern[0.1]{_{"+nlsp_s+"/"+cgino_s+"}} [GeV]"
+
+        # LSP
+        self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} [GeV]"
+        # turn off diagonal lines
+        self.diagOn = False
+        self.boxOn = False
 
     def T1tttt(self):
         # model name
@@ -27,7 +54,7 @@ class sms():
         self.Zmin = 0.001
         self.Zmax = 2.
         # produce sparticle
-        self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}}} [GeV]"
+        self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}} } [GeV]"
         # LSP
         self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} [GeV]"
         # turn off diagonal lines
