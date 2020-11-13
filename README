@@ -1,5 +1,6 @@
 To run the code
 
+NB: doesn't seem to work with CMSSW10: use CMSSW8
 1) prepare your python environment to use ROOT
 You can just do cmsenv from a CMSSW directory or
 export ROOTSYS=/usr/ROOT/root
